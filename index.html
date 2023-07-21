@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cheatsheet HTML</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600&family=Rubik+Pixels&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Cheatsheet HTML</h1>
+    <button><a href="css.html">CSS</a></button>
+    <button><a href="design.html">Design</a></button>
+    <button><a href="javascript.html">JavaScript</a></button>
+    <nav id="navi"><a href="#id">Aufbau</a> <a href="#semantic">Semantic HTML</a> <a href="#command">Commands</a> 
+         <a href="#tabby">Tabellen</a><a href="#viewp">Meta tag</a> <a href="#forms">Forms</a> <a href="#rest">Sonstiges</a></nav>
+    <h2>HTML Aufbau</h2>
+    <section id="structure">
+        <ol>
+            <li>Start mit &lt;!DOCTYPE html&gt;</li>
+            <li>&lt;html&gt;</li>
+            <li>Unsichtbarer Teil: &lt;head&gt; enthält &lt;title&gt;, der im Tab angezeigt wird und verlinkt mit CSS per &lt;link href="./style.css' rel='stylesheet"&gt; 
+                oder zusätzlich externe Schrift auch als &lt;Link&gt; und URL anstelle von ./style.css </li>
+            <li>Sichtbarer Teil: &lt;body&gt; gefolgt von &lt;footer&gt;</li>
+        </ul>
+    </section>
+    <section id="semantic">
+    <h2>Semantic HTML</h2>
+    <p>Besseres Design und Übersichtlichkeit durch Unterteilung des &lt;body&gt; in 
+        <table border="1">
+            <thead>
+                <tr><th scope=”col”>Aufbau</th>
+                    <th scope=”col”>Zusätzliche Einteilung</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>&lt;header&gt; </td> 
+                  <td>&lt;div&gt;</td> 
+                </tr>
+                <tr>
+                    <td>&lt;nav&gt;</td>
+                    <td>&lt;section&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;main&gt;</td>
+                    <td>&lt;article&gt; eher innerhalb section</td>
+                </tr>
+                <tr>
+                    <td>&lt;footer&gt;</td>
+                    <td>&lt;aside&gt; nach article, wie Kommentare, Zitate, Bibliografien</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>ID innerhalb element &lt;div id="name"&gt;</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>&lt;span&gt; um mitten im Text Element zu sondern - ohne Zeilenumbruch</td>
+                </tr>
+        </tbody></table>
+        <br>
+    </section>
+    <section id="command">
+        <h2>Commands</h2>
+        <table border="1">
+            <tr><th scope=”col”>command</th>
+                <th scope=”col”>Effekt</th>
+                <th scope=”col”>Beispiel</th>
+                <th scope=”col”>Command</th>
+                <th scope=”col”>Effekt</th>
+                <th scope=”col”>Beispiel</th></tr>
+            <tr>
+                <td>&lt;h1-6&gt;</td>
+                <td>Überschrift</td>
+                <td>&lt;h1&gt;</td>
+                <td>&lt;p&gt;</td>
+                <td>Text</td>
+                <td></td>
+             <tr>   
+                <td>&lt;a&gt;</td>
+                <td>Anchor für Link/Pfad/#id und optional target für öffnen in neuem Tab</td>
+                <td>&lt;a href="www.codecademy.com" target="_blank"&gt;Beispieltext&lt;/a&gt;</td>
+                <td>&lt;button&gt;</td>
+                <td>selbsterklärend</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&lt;em&gt;</td>
+                <td>kursiv</td>
+                <td></td>
+                <td>&lt;strong&gt;</td>
+                <td>fett</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&lt;br&gt;</td>
+                <td>neue Zeile</td>
+                <td>einmalig ohne closing</td>
+                <td>&lt;ul&gt;</td>
+                <td>unordered list</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&lt;li&gt;</td>
+                <td>Listenelement</td>
+                <td></td>
+                <td>&lt;ol&gt;</td>
+                <td>nummerierte Liste</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&lt;img&gt;</td>
+                <td>Foto einfügen</td>
+                <td>&lt;img src="pfad oder Link" alt="optionale Beschreibung"/&gt; self-closing element</td>
+                <td>&lt;video&gt;</td>
+                <td>video einfügen</td>
+                <td>&lt;video src="myVideo.mp4" width="320" height="240" controls&gt;
+                      Video not supported
+                    &lt;/video&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;figure&gt;</td>
+                <td>Foto inkl figcaption für begleitende Beschreibung</td>
+                <td>&lt;figure&gt;&lt;img&gt;&lt;figcaption&gt; und wieder alles schließen </td>
+                <td>&lt;audio&gt;</td>
+                <td>audio einbetten</td>
+                <td>&lt;audio
+                    controls
+                    src="Link oder Pfad"&gt;
+                    &lt;a href="gleicher Link oder Pfad"&gt;
+                            Download audio
+                            &lt;/a&gt;&lt;audio&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;style&gt;</td>
+                <td>erlaubt styling ohne CSS-File</td>
+                <td>&lt;style&gt; h1 &#123;font-family: green; font-size: 4px;&#125;</td>
+                <td>&lt;style&gt; Teil 2</td>
+                <td>styling als attribut</td>
+                <td>&lt;p style=’color: green; other elements’&gt;&lt;/p&gt;</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>Infotext, der angezeigt wird, wenn man mit Cursor über Element fährt</td>
+                <td>&lt;img title="Beispiel"/&gt;</td>
+            </tr>
+        </table>
+    </section>
+    <section id="tabby">
+        <h2>Tabellen</h2>
+        <ul>
+            <li>Struktur &lt;table&gt; umschließt &lt;thead&gt;, &lt;tbody&gt; und ggflls &lt;tfoot&gt;</li>
+            <li>neue Zeile, auch für Leitkategorien beginnen mit &lt;tr&gt;</li>
+            <li>Leitkategorie unter &lt;thead&gt; und &lt;tr&gt; als &lt;th scope=”col”&gt;erste Spalte&lt;/th&gt; - je mehr Elemente, desto mehr Spalten</li>
+            <li>col = Spalte row = Zeile</li>
+            <li>Zelleninhalt innerhalb von &lt;tbody&gt; in &lt;tr&gt; als &lt;td&gt;</li>
+            <li>Zelleninhalt über col oder row strecken, Zahl ist Zellenzahl: &lt;td colspan="2"&gt;Zelleninhalt&lt;/td&gt;</li>
+            <li>&lt;tfoot&gt; benötigt wohl keine extra &lt;tr&gt;</li>
+
+        </ul>
+
+    </section>
+    <section>
+        <h2 id="viewp">Meta Tag</h2>
+        <p>Based on the size of the viewport, the meta tag &lt;meta&gt;  is used to instruct the browser on how to render the webpage’s scale and dimensions. 
+            If a web page is 960px and the device is 320px wide. Adding the viewport meta tag will squish the content down
+            until it is 320px</p>
+        <ul>
+            <li>  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</li>
+            <li>name="viewport" attribute: tells the browser to display the web page at the same width as its screen</li>
+            <li>content attribute: defines the values for the &lt;meta&gt; tag, including width and initial-scale</li>
+            <li>width=device-width key-value pair: controls the size of the viewport in which it sets the width of the viewport to equal the width of the device</li>
+            <li>initial-scale=1 key-value pair: sets the initial zoom level (Read more about scale at MDN’s viewport documentation)</li>
+        </ul>
+    </section>
+    <section id="forms">
+        <p>&lt;form action="/example.html" method="POST"&gt; &lt;/form&gt; <br>
+            The action attribute determines where the information is sent. The method attribute is assigned a HTTP verb that is included in the HTTP request. <br>
+        Form elements can contain children like header or p. Within form element we need:
+    <ul><li>&lt;input type="text" name="first-text-field"&gt; - When the form containing input “important details” is submitted, the text: `
+        "first-text-field=important details"` is sent to `/example.html` because the value of the `name` attribute is `"first-text-field"` 
+        and the value of `value` is `"important details"`.  —> default value prefilled upon value=”prefilled message”</li>
+    <li>LABEL: For a user to properly identify an &lt;input&gt; we use the appropriately named &lt;label&gt; element. &lt;Input&gt; needs ID and &lt;label&gt; needs FOR attribute so they go together. <br>
+        &lt;form action="/example.html" method="POST"&gt; <br>
+           &lt;label for="meal">What do you want to eat? &lt;/label&gt;
+              <br>
+               &lt;input type="text" name="food" id="meal"&gt;
+            &lt;/form&gt;</li></ul>
+    <h3>Types of Fields</h3>
+<ul><li><strong>Passwords</strong> - An &lt;input type ="password"&gt; element will replace input text with another character like an asterisk (*) or a dot (•)
+
+</li>
+<li><strong>Numbers</strong> - step attribute which creates arrows inside the input field to increase or decrease by the value of the step attribute, see 
+      &lt;input id="years" name="years" type="number" step="1"&gt; -> step 1 = ganze zahl +-</li>
+<li><strong>Range Input</strong> - type=”range” —> &lt;input id="volume" name="volume" type="range" min="0" max="100" step="1"&gt; will create a slider</li>
+<li><strong>Checkbox Input</strong> - &lt;label for="cheese"&gt;Extra cheese</label>
+      &lt;input id="cheese" name="topping" type="checkbox" value="cheese"&gt;</li>
+<li><strong>Radio Button</strong> - present multiple options & only allow for one selection, like terms&conditions, see <br>
+    &lt;form>
+      &lt;p>What is sum of 1 + 1?&lt;/p&gt; <br>
+      &lt;input type="radio" id="two" name="answer" value="2"&gt; <br>
+      &lt;label for="two"&gt;2&lt;/label&gt;
+          <br>
+          &lt;input type="radio" id="eleven" name="answer" value="11"&gt; <br>
+          &lt;label for="eleven">11&lt;/label&gt;
+        &lt;/form&gt; </li>
+<li><strong>DropDown List</strong> - &lt;form&gt;
+      &lt;label for="lunch">What's for lunch?&lt;/label&gt; <br>
+      &lt;select id="lunch" name="lunch"&gt; <br>
+        &lt;option value="pizza">Pizza&lt;/option&gt; <br>
+        &lt;option value="curry">Curry&lt;/option&gt; <br>
+        &lt;option value="salad">Salad&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/form&gt;</li>
+<li><strong>Datalist</strong> - used with an &lt;input type="text"&gt; element. The &lt;input&gt; creates a text field that users can type into and filter options
+    from the &lt;datalist&gt;. Difference select & datalist: If none of the options match, the user can still use what they typed in. (datalist). <br>
+    &lt;form&gt; <br>
+      &lt;label for="city">Ideal city to visit?&lt;/label&gt; <br>
+      &lt;input type="text" list="cities" id="city" name="city"&gt; <br>
+    
+      &lt;datalist id="cities"&gt;<br>
+        &lt;option value="New York City"&gt;&lt;/option&gt;<br>
+        &lt;option value="Tokyo">&lt;/option&gt;<br>
+        &lt;option value="Barcelona">&lt;/option&gt;<br>
+        &lt;option value="Mexico City"&gt;&lt;/option&gt;
+          
+      &lt;/datalist&gt;
+    &lt;/form&gt;</li>
+<li><strong>Textarea</strong> - if more information needed, then &lt;textarea&gt; instead of &lt;input&gt;. The value of &lt;textarea&gt; is the text written inside 
+    he box. If we want to add a default value to &lt;textarea&gt; we would include it within the opening and closing tags like so: 
+
+    &lt;textarea&gt;Adding default text&lt;/textarea&gt; <br>
+    &lt;form&gt; <br>
+      &lt;label for="blog">New Blog Post: &lt;/label&gt;
+          <br>
+          &lt;textarea id="blog" name="blog" rows="5" cols="30"&gt; <br>
+          &lt;/textarea&gt;
+        &lt;/form&gt;
+</li>
+<li><strong>Submit button</strong> <br> 
+    &lt;form&gt; <br>
+      &lt;input type="submit" value="Send" &gt;
+    &lt;/form&gt;   -> button will say "Send", if no value attribute, then will display "Submit"</li>
+<li><strong>Requiring Input</strong> - &lt;input id="allergies" name="allergies" type="text" required&gt; <br>
+    number - type=”number” min=”1” max=”5”  <br>
+    characters - minlength="5" maxlength="250" <br>
+    following pattern (regex) - pattern=”[0-9]{14,16}" which checks that the user provided only numbers and that they entered at least 14 digits and at most 16 digits.</li>
+</ul></p> <br>
+
+    </section>
+    <section id="rest">
+        <h2>Sonstiges</h2>
+        <ul>
+            <li>&lt;!-- Kommentar, der unsichtbar bleibt, z. B. um Code nicht zu löschen --&gt;</li>
+        </ul>
+    </section>
+    </p>
+  
+</body>
+<button><a href="#navi">Menü</a></button>
+<footer></footer>
+</html>
+
+

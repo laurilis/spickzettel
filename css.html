@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>css</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600&family=Rubik+Pixels&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1 id="top">CSS</h1>
+    <button><a href="./index.html">HTML</a></button>
+    <button><a href="design.html">Design</a></button>
+    <button><a href="javascript.html">JavaScript</a></button>
+    <br>
+    <nav>
+        <a href="#basic">Basics</a> <a href="#cat">Kategorien&Einheiten</a> <a href="#prop">Properties&Values</a>
+        <a href="#colo">Farben</a> <a href="#font">Schriftart</a><a href="#bread">Breadcrumbs</a>
+        <a href="#flexbox">Flexbox</a><a href="#grid">Grids</a><a href="#media">Media Queries</a>
+    </nav></header>
+    <main>
+        <br><br>
+        <section> 
+            <h2 id="basic">Basics</h2>
+            <div class="dad">
+            <div class="listi">
+            <ul>
+                <li>CSS-File muss in html in &lt;head&gt; eingefügt werden: &lt;link href="./style.css' rel='stylesheet"&gt;</li>
+                <li>mehrere selectors auf einmal customizen durch .p, .h1 &#123;&#125;</li>
+                <li>von weit zu spezifisch: h1 —> .bold —> #idtitle = im zweifel hat spezifischer selector vorrang</li>
+                <li>Priorisieren p &#123;color: blue !important;&#125;</li>
+                <li>Chaining: h1.brokoli &#123;&#125; - nur h1-Elemente mit class brokoli betroffen</li>
+                <li>Descendant combinator: .brokoli li &#123;&#125; - li als Unterelement von class brokoli </li>
+                <li>Pseudoclasses bewirken bestimmten Effekt: Links haben :link(ungeöffnet) a:hover lässt Farbe ändern, wenn man darüber fährt :visited :active (Reihenfolge einhalten ist MUSS!)</li>
+                <li>Resetting defaults: when editing/re-designing html put margin & padding: 0;</li>
+            </ul></div>
+           
+            <div class="pics">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.N4kHUbOl-uyGYxnjG_1ZeQGaCY%26pid%3DApi&f=1&ipt=5558e26e43e85eacc05a0d5b248dc7d3534e81aa0a3528f7a23f3f37936d164a&ipo=images" id="pic"/>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ydgkPlP_bYrNp9FxxjYHFwAAAA%26pid%3DApi&f=1&ipt=76ab46a7ca173522c978323bcfcc205203bfdaa395aae702a63ee8832048eac0&ipo=images" id="pic2"/>
+            </div></div>
+        </section>
+        <br><br>
+        <section>
+            <h2 id="cat">Kategorien & Einheiten</h2>
+            <div class="tableflex">
+            <table border="1">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">in CSS</th> 
+                    </tr>
+                    <tr>
+                        <td>Element</td>
+                        <td>p &#123;&#125;</td>
+                    </tr>
+                    <tr>
+                        <td>class</td>
+                        <td>.p &#123;&#125;</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>#id &#123;&#125;</td>
+                    </tr>
+                    <tr>
+                        <td>alle href Elemente</td>
+                        <td>&#91;href&#93;</td>
+                    </tr>
+                    <tr>
+                        <td>Pseudoclasses</td>
+                        <td>a:hover &#123;color: orange;&#125;</td>
+                    </tr>
+            </table>
+            <table border="1">
+                <tr>
+                    <th scope="col">Einheit</th>
+                    <th scope="col">Info</th> 
+                </tr>
+                <tr>
+                    <td>px</td>
+                    <td>hard coded measurements (same on every device)</td>
+                </tr>
+                <tr>
+                    <td>em</td>
+                    <td>font size of current element</td>
+                </tr>
+                <tr>
+                    <td>rem</td>
+                    <td>refers to font size of root element specified unter html &#123;font-size: 12px&#125; - default is 16px</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>often used to size box-model values or positioning - child element uses parent's width</td>
+                </tr>
+           </table>
+              </div>
+        </section>
+        <br><br>
+        <section>
+            <h2 id="prop">Properties & Values</h2>
+            <table border="1">
+                <tr>
+                    <td></td>
+                    <th scope=" col">Property</th>
+                    <th scope=" col">Value</th>
+                    <th scope=" col">Info</th>
+                    <td></td>
+                    <th scope=" col">Property</th>
+                    <th scope=" col">Value</th>
+                    <th scope=" col">Info</th>
+                </tr>
+                <tr>
+                    <th scope="row">Text</th>
+                    <td>font-family</td>
+                    <td>'Times New Roman'; serif;</td>
+                    <td>falls mehr als ein Wort, dann mit ''; serif & sans-serif Fontkategorisierungen</td>
+                    <th scope="row">Border</th>
+                    <td>border</td>
+                    <td>solid green 3px;</td>
+                    <td>alles Wichtige vereint</td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>border-width</td>
+                    <td>thin; medium; thick;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>font-size</td>
+                    <td>30px</td>
+                    <td>Schriftgröße</td>
+                    <td></td>
+                    <td>border-style</td>
+                    <td>dotted; non; solid; </td>
+                    <td>non ist wohl default</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>font-weight</td>
+                    <td>bold; normal; lighter; bolder; 1-1000;</td>
+                    <td>Fettigkeit; Relation zum parent element; Numerical value 400=normal, 700=bold (nicht bei allen Fonts anwendbar)</td>
+                    <td></td>
+                    <td>border-color</td>
+                    <td>khaki;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>(background-)color</td>
+                    <td>khaki;</td>
+                    <td>Schrift- oder Hintergrundfarbe</td>
+                    <td></td>
+                    <td>border-radius</td>
+                    <td>50%;</td>
+                    <td>Abrundung? Und gleicher width&height ist Kreis?</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>box-shadow</td>
+                    <td>0px 4px;</td>
+                    <td>Kontrast für realistischen Effekt</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>font-style</td>
+                    <td>italic</td>
+                    <td>kurisv</td>
+                    <th scope="row">Groß-/Kleinbuchstaben</th>
+                    <td>text-transform</td>
+                    <td>uppercase; lowercase;</td>
+                    <td>alles groß oder klein</td>
+                </tr>
+                <tr>
+                    <td></td>>
+                    <td>letter-spacing</td>
+                    <td>2px; 2em;</td>
+                    <td>em ist font size</td>
+                    <th scope="row">Zeilenhöhe</th>
+                    <td>line-height</td>
+                    <td>1.2 (in Relation zu font); 12px; 5%; 2em;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>word-spacing</td>
+                    <td>3px; 3em;</td>
+                    <td>Abstand zwischen Wörtern</td>
+                    <th scope="row">Unterstrich</th>
+                    <td>text-decoration</td>
+                    <td>underline/overline wavy dotted red;</td>
+                    <td>Unter- oder Oberstrich, optional wavy oder dotted und Farbe</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>opacity</td>
+                    <td>0.1</td>
+                    <td>Wert zwischen 0-1, Fading-Effekt</td>
+                    <th scope="row">Padding</th>
+                    <td>padding-top/right/left/bottom</td>
+                    <td>6px 11px 5px 9px;</td>
+                    <td>if right&left equal, dann 3 Werte, falls oben unten&rechts links gleich, dann 2 Werte</td>
+                </tr>
+                <tr>
+                  <th scope="row">Background</th>
+                  <td>background-image</td>
+                  <td>url("Link oder relative path")</td>
+                  <td>sollte für jeweiliges Element gelten</td>
+                  <th scope="row">Margin</th>
+                  <td>margin-top/right/left/bottom</td>
+                  <td>z.B. 0 auto</td>
+                  <td>0 ist Standard, auto passt automatisch an</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>background-repeat</td>
+                    <td>no-repeat</td>
+                    <td>soll Hintergrundbild wiederholt werden?</td>
+                    <th scope="row">Mindestmaße</th>
+                    <td>min-/max-width/height</td>
+                    <td>150px; 50%;</td>
+                    <td>Bsp.: min-height: 40px; - falls Content größer als 40px, dann geschieht Overflow</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>background-position</td>
+                    <td>center oder was auch immer</td>
+                    <td></td>
+                      <th scope="row">Übergröße was tun?</th>
+                    <td>overflow</td>
+                    <td>hidden; scroll; visible;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                   <td></td>
+                    <td>background-size</td>
+                    <td>cover</td>
+                    <td>nimmt 100% width an</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  
+                </tr>
+                <tr>
+                    <th scope="row">Ausrichtung am parent element</th>
+                    <td>text-align</td>
+                    <td>left; right; center; justify; (Blocksatz)</td>
+                    <td></td>
+                    <th scope="row">Sichtbarkeit</th>
+                    <td>visibility</td>
+                    <td>hidden</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">BOX</th>
+                    <td>box-sizing</td>
+                    <td>border-box</td>
+                    <td>Größe wird an Element angepasst</td>
+                    <th scope="row">Position</th>
+                    <td>position</td>
+                    <td>relative </td>
+                    <td>positioned relative to its normal position, aber deviation von Seiten, daher Zusatzangabe top/right/left/bottom: 30 px;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>z-index</td>
+                    <td>1 oder z. B. 5</td>
+                    <td>Überlappung definieren, klappt nicht bei static elements, hoher Wert = Vordergrund</td>
+                    <td></td>
+                    <td></td>
+                    <td>fixed; sticky;</td>
+                    <td>bewegt sich mit; bleibt für bestimmten bereich sticky</td>
+                </tr>
+                <tr>
+                    <th scope="row">Display</th>
+                    <td>display</td>
+                    <td>inline</td>
+                    <td>setzt alles in gleiche Zeile, Dimensionen nicht einstellbar, z. B. em, a oder strong</td>
+                    <td></td>
+                    <td></td>
+                    <td>absolute</td>
+                    <td>Orientierung an parent Element, das auch absolute oder relative ist, auch mit top/left/right/bottom: 3px;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>block</td>
+                    <td>Standard bei p, div, h, footer</td>
+                    <th scope="row">Display</th>
+                    <td>float</td>
+                    <td>right/left</td>
+                    <td>Verschieben von static oder relative elements, width muss spezifiziert sein</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>inline-block</td>
+                    <td>Mischform</td>
+                    <th scope="row">Aufprall vermeiden</th>
+                    <td>clear</td>
+                    <td>left/right/none/both</td>
+                    <td>Bei Zusammenstoß, wo tunlichst vermeiden?</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cursor</th>
+                    <td>cursor</td>
+                    <td>pointer</td>
+                    <td>bei z. B. Links Cursor customizen</td>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            
+            </table>
+        </section>
+        <br><br>
+        <section>
+            <h2 id="colo">Colours</h2>
+            <h3>Hexadecimals</h3>
+            <p>16 Digits, for representing 10-15 letters are used (A-F). Codes are 6 digits but can be reduced to 3, 
+                e.g. #BB44FF shortened #B4F. <em>Opacity</em> can be added by two(3 digits=1) numbers in the end</p>
+            <h3>RGB</h3>
+            <p>Three values representing the colour components red green blue with each a number between 0-255. 
+                <em>Opacity</em> by naming it rgba and adding a fourth value</p>
+            <h3>HSL: Hue-Saturation-Lightness color scheme</h3>
+            <p><strong>Hue</strong> in degrees (0-360) which symbolizes a colour wheel
+                where Red is 0 degrees, Green is 120 degrees, Blue is 240 degrees, and 
+                then back to Red at 360 
+                <br>
+                <strong>Saturation</strong> refers to the intensity or purity of the colour (percentage)
+                <br>
+                <strong>Lightness</strong> (percentage), so color: hsl(120, 60%, 70%);</p>
+            <h3>Color: transparent same as rgba (0, 0, 0, 0)</h3>
+        </section>
+        <br><br>
+        <section>
+            <h2 id="font">Fonts</h2>
+            <ul>
+                <li><strong>fallback fonts</strong> in case desired font not available: 
+                    font-family: caslon, georgia, ‘times new roman’, serif; (wenn nicht caslon, dann georgia, wenn nicht georgia, dann tnr)</li>
+                <li>font styles, web safe fonts: https://www.cssfontstack.com/ (widely supported) —> &lt;link&gt; needs to be within &lt;head&gt;</li>
+                <li><strong>Free font services</strong> (Google Fonts and Adobe Fonts), host fonts that you can link to from your 
+                    HTML document with a provided &lt;link href="link" rel="stylesheet"&gt; element. (in CSS font-family: fontname)</li>
+                <li><strong>paid font distributors</strong> like fonts.com by downloading and hosting them with the rest of your site’s files. You can create a 
+                    @font-face ruleset in your CSS stylesheet to link to the relative path of the font file. —> 
+                    formats TTF, WOFF, and WOFF2 formats arew widely compatible</li>
+                <li><strong>@fontface: {font-family: ‘namenausdenken’; src: ‘}</strong> (am besten am anfang von css)
+                        <br>src: url('fonts/Roboto.woff2') format('woff2'),
+                                  <br> url('fonts/Roboto.woff') format('woff'),
+                                  <br>     url('fonts/Roboto.ttf') format('truetype'); <br> -> priorisiierung von oben nach unten -> in code editor hochladen und diesen pfad angeben </li>
+           
+                <li>Additional tools to generate additional file types for WOFF and WOFF2, check out MDN’s list of font generators for more information.</li>            </ul>
+        </section>
+        <br><br>
+        <section>
+            <h2 id="bread">Breadcrumb</h2>
+            <p>Verzweigte Seitennavigation, often durch Symbol getrennt wie &gt; oder /, Tipp: automatisch &gt; zwischen Items setzen: .breadcrumb li+li::before {content: "&gt;";}</p>
+            <ul>
+                <li>Location based: based on where you are with respect to the navigation structure of the website</li>
+                <li>Attribute based: Bsp. we are shopping for shoes that are 
+                    “flats” and “brown”. Since the order of these attributes is not 
+                    prescriptive, you’ll see some sites display these at the same level in 
+                    the UI. If you want to allow users to remove attributes, provide an (x) 
+                    button or similar to indicate they can be removed.</li>
+                <li>Path based: based on a user’s unique path through the site. Like: Home > About > Register. This breadcrumb trail 
+                   will be different for each user and each visit. For even mildly complex 
+                   sites, the number of steps will become large. To simplify the display, 
+                   the beginning of the trail is often abbreviated: ... > About > Register</li>
+            </ul>
+            <div class="pfeil" border="1" style="border: 1px solid;">
+                <p><strong>Styling Breadcrumb als optischer Pfeil</strong></p>
+                    <p>.breadcrumb a::before {
+                        left: -10px;
+                        border-left-color: transparent;}</p>
+                        
+                    <p>   .breadcrumb a::after {
+                        left: 100%;
+                        border-color: transparent;
+                        border-left-color: darkcyan;
+                        }</p>
+                </div>
+        </section>
+        <br><br>
+        <section>
+            <h2 id="flexbox">Flexbox - One Dimensional Positioning</h2>
+            <p>Flex containers with display: (inline-)flex; will decide child elements' positioning</p>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.stack.imgur.com%2Fmns2H.jpg&f=1&nofb=1&ipt=cf1dcd1a33d2b22fde54985f45aa0198d848b61519b7896889ca9bcfda4c5899&ipo=images" width="320px"/>
+            <img src="flex3.jpg" width="50%"/>
+            <img src="flex.jpg"/>
+            <img src="flex2.jpg" width="100%">
+        </section>
+        <br><br>
+        <section>
+            <h2 id="grid">Grids - x-dimensional Positioning</h2>
+            <ul>
+                <li>by default 1 column!</li>
+                <li>fr unit to define fractions: fr fr fr are 3 fractions equalling one third</li>
+                <li>minmax: if you have a 100-pixel wide image in your grid, you probably don’t want its column to get thinner than 100 pixels! The minmax() function can help us solve this problem. 
+
+                    minmax(100px, 500px) 100px;→ the first and third columns will always be 100 pixels wide, no matter the size of the grid. The second column,
+                     however, will vary in size as the overall grid resizes. The second column will always be between 100 and 500 pixels wide. —
+                     >minmax ersetzt einzelnen wert, also grid-template: 1fr 2fr 2fr / 3fr minmax(30px, 50px) 1fr;</li>
+                <li><strong>justify-self</strong> specifies how an individual element should position itself with respect to the row axis. 
+                    This property will override justify-items for any item on which it is declared. Valid propositions are <strong>start end center stretch</strong></li>
+                <li><strong>align-self</strong> will do the same for column axis</li>
+            </ul>
+            <img src="grid1.jpg" width="100%"/>
+            <h3>implicit grid: when more items than space are available (onlineshopping)</h3>
+            <ul>
+                <li>grid-auto-rows/columns: specifies the height of implicitly added grid rows/columns / accept values px % fr repeat()</li>
+                <li>grid-auto-flow: specifies whether new elements should be added to rows or columns
+                        <ul>
+                            <li>:row - the new elements should fill rows from left to right and create new rows when there are too many elements (default)</li>
+                            <li>:column - same but column direction</li>
+                            <li>:dense - attempts to fill holes earlier in the grid layout if smaller elements are added</li>
+                            <li>You can pair `row` or `column` with `dense`, like this: `grid-auto-flow: row dense;`</li>
+                        </ul>
+                </li>
+        
+        </section>
+        <br><br>
+        <section>
+            <h2 id="media">Media Queries - Responsive Design</h2>
+            <div class="flexquery">
+            <div class="platzhalter">
+            <p>Falls sich <em>Breakpoints</em> zeigen, also Begrenzung auf bestimmte Width das Layout verzerrt durch z. B. ein anderes Device, lässt sich dieses durch Media Queries ändern. In CSS am besten unter Regel bevor neue Section beginnt. <br>
+            Aufbau ist <strong style="color: aqua">@media only screen and (min-width: 300px) and (max-width: 790px), (orientation: landscape)</strong></p>
+            
+            <ul>
+                <li><strong>and ()</strong>- Bedingung muss gegeben sein, wenn zwei and (), dann müssen beide erfüllt sein. Reihenfolge wichtig:
+                zuerst min- dann max-</li>
+                <li><strong>, ()</strong> - eine der Bedingungen muss erfüllt sein, um Query umzusetzen</li>
+                <li>Beispiele für queries: max/min-width/height - min-resolution: 300dpi - orientation: landscape or portrait</li>
+                <li><em>Breakpoints</em> lassen sich per DevTools simulieren</li>
+            </ul></div>
+            <img id="kid" src="https://content.codecademy.com/courses/freelance-1/unit-5/screen-sizes.png" width="80%"/>
+        </div>
+    </section>
+    <br><br>
+        <button><a href="#top">Menü</a></button>
+    </main>
+</body>
+</hmtl>

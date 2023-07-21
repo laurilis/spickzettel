@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600&family=Rubik+Pixels&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>JavaScript</h1>
+            <button><a href="index.html">HTML</a></button>
+            <button><a href="css.html">CSS</a></button>
+            <button><a href="design.html">Design</a></button>
+        
+            <nav id="navi">
+                <a href="#terms">Terms</a> 
+                <a href="#operator">Operators</a> 
+                <a href="#var">Variables</a> 
+                <a href="#strint">String Interpolation</a>
+                <a href="#cond">Conditional Statemens</a> 
+                <a href="#function">Functions</a>
+                <a href="#scope">Scope</a>
+                <a href="#arr">Arrays</a>
+                <a href="#method">Methods</a>
+                <a href="#loops">Loops</a>
+                <a href="#objects">Objects</a>
+                <a href="#debug">Errors & Debugging</a>
+                <a href="#html">Connect JS to HTML</a>
+                <a href="#regex">Regular Expressions</a>
+
+
+                <a href="#hinweise">Hinweise & Tipps</a>
+            </nav>
+    <br><br>
+      <h2 id="terms">Terms</h2>
+      <ul>
+        <li><strong>Console</strong> - a panel that displays (=”prints”) important messages</li>
+        <li><strong>Method</strong> - actions we can perform. Data types have access to specific methods that allow us to handle instances of that data type.</li>
+        <li><strong>Property</strong> - gibt Auskunft über Objekt, keine externe Aktion, bsp .length</li>
+        <li><strong>Variable</strong> - Containers for storing Data</li>
+        <li><strong>Boolean</strong> - value true or false</li>
+        <li><strong>Expression</strong> - a combination of values, variables, and operators, which computes to a value. The computation is called an evaluation. For example, 5 * 10 evaluates to 50.</li>
+        <li><strong>Functions</strong> - a block of code designed to perform a particular task</li>
+        <li><strong>Strings</strong> - 'Text within quotation marks'</li>
+        <li><strong>Objects</strong> - Collections of related Data</li>
+        <li><strong></strong></li>
+      </ul><br><br>
+
+    <h2 id="operator">Operators</h2>
+    <p>Characters that perform a task in our code</p>
+    <h3>Arithmetic Operators</h3>
+    <ul>
+        <li><strong>dot operator .</strong></li>
+        <li><strong>+</strong> operator can be used to combine two string values even if those values are being stored in variables, bsp.  
+            let myPet = ‘dog’; / console.log(’I own a pet’ + myPet ‘ .’); —> I own a pet dog</li>
+            <li><strong>++</strong> increment operator - will increase operator by 1</li>
+        <li><strong>typeof</strong> - checks value to its right: const unknown1 = ‘foo’; / console.log(typeof unknown1); / string</li>
+        <li><strong>-</strong> substract</li>
+         <li><strong>--</strong> decrement operator - wil decrease operator by 1</li>
+        <li><strong>*</strong> multiply</li>
+        <li><strong>/</strong> divide</li>
+        <li><strong>%</strong> Remainder or Modulor: returns the number that remains after the right-hand number divides into the left-hand number as many times as it evenly can: 11 % 3 equals 2 because 
+            3 fits into 11 three times, leaving 2 as the remainder</li>   
+    </ul> 
+    <p>Operators changing variables with = see let w = 1 / w -=5 / Output w = 15</p>
+    <br>
+    <h3>Comparison Operators</h3>
+    <ul>
+    <li><strong>x < y</strong>less than</li>
+    <li><strong>y > x </strong>greater than</li>
+    <li><strong>x >= y</strong>greater or equal</li>
+    <li><strong>y <= x</strong>less or equal</li>
+    <li><strong>===</strong>equal to</li>
+    <li><strong>!==</strong>not equal</li></ul> <br>
+    <h3>Logical operators</h3>
+    <ul>
+        <li><strong>x && y</strong> - and operator: checks if both conditions are true</li>
+        <li><strong>x || y</strong> - or operator: checks if x or y is true</li>
+        <li><strong>!</strong> - not or bang operator: reverses the boolean, bsp. let x = true / console.log(!x) prints false</li>
+    </ul><br>
+    <h3>Ternary Operator</h3>
+    <p>for simplyfing if.. else.. statements
+        <br> <em>before</em>: let sale = true; / sale = false; / if (sale) {console.log(’yes’) else {console.log(’no’); / result: no
+        <br>
+        <em>after</em>: sale ? console.log(’yes’) : console.log(’no’);</p>
+
+    <br><br>
+    <h2 id="var">Variables</h2>
+    <h3>LET</h3>
+    <p>Can be assigned without value (=undefined) and can be changed</p>
+    <h3>CONST</h3>
+    <p>Konstante, nicht veränderbare Variable. Wert muss zugeschrieben werden.</p> <br><br>
+
+    <h3 id="strint">String Interpolation</h3>
+    <p>Connecting strings & variables: const myPet = 'armadillo'; / console.log(`I own a pet ${myPet}.`); / Output: I own a pet armadillo.<br>
+        —> Careful to use back tick `` <br>
+        —> $() is called <em>template literal</em></p>
+        <br><br>
+    <h2 id="cond">Conditional Statements</h2>
+    <p>if(condition true) {inneren Befehl ausführen} else {ansonsten alternativen Befehl ausführen} <br>
+        Bsp.: let sale = true; / sale = false; / if (sale) {console.log(’yes’) else {console.log(’no’); / result: no 
+        Falsy Values = 0, empty strings, NaN (not a number)</p> <br>
+    <h3>Else if</h3>
+    <p>für mehrere Outcomes: let stopLight = 'yellow'; <br>
+        if (stopLight === 'red') {console.log('Stop!')}<br>
+         else if (stopLight === 'yellow') {console.log('Slow down.')}<br>
+         else if (stopLight === 'green') {console.log('Go!')}<br>
+        else {console.log('Caution, unknown!')}</p><br>
+    <h3>Switch</h3>
+    <p>let groceryItem = 'papaya'; <br>
+
+        switch (groceryItem) {case 'tomato':    console.log('Tomatoes are $0.49'); break; <br> case 'lime':    console.log('Limes are $1.49');     break; <br> case 'papaya':    console.log('Papayas are $1.29');
+            break; <br> default:    console.log('Invalid item');    break;}  <br> // Prints 'Papayas are $1.29'</p>
+   <br><br>
+
+
+
+
+
+   <h2 id="function">Functions</h2>
+    <p>has the form: function greetWorld(parameter) {console.log('hello world!)} <br>
+    -> function keyword + identifier + function body <br> Function is called by typing function(); or greet('Laura');<br>
+If more functions within curly braces, then ; for separation</p>
+    <ul>
+        <li><strong>Block</strong>: the inside of {curly braces}</li>
+        <li><strong>Parameter</strong>: allows function to accept input(s) and perform a task using the input(s). We use parameters as placeholders for information that will be passed to the function when it is called.</li>
+        <li><strong>Default Parameter</strong>: function greeting (name = 'stranger') {console.log(`Hello, ${name}!`)} <br>
+            greeting('Nick') // Output: Hello, Nick! —> overrides default stranger <br>
+            greeting() // Output: Hello, stranger!</li>
+        <li><strong>Return</strong>: um Ergebnisse anzuzeigen</li> </ul><br>
+    <h3>Function Structures</h3>
+    <ul><li><strong>Function Expression: </strong> creates function inside an expression const dog = function() {return ‘Woof!’};</li>
+        <li><strong>Arrow Function: </strong>const functionName = (paramOne, paramTwo) ⇒ {};</li>
+        <li><strong>Function Declaration: </strong> create named functions —> function add(num1, num2) {return num1 + num2;}</li></ul>
+
+   <br>
+    <h3>Helper Function</h3>
+    <p>using the return value from one function in another, bsp. <br>
+        function monitorCount(rows, columns) {return rows * columns;} <br> function costOfMonitors(rows, columns) {return monitorCount(rows, columns) * 200};
+    <br> const totalCost = costOfMonitors(5, 4); —> console.log(totalCost); </p> <br>
+
+    <h3>Arrow Functions</h3>
+ <ul><li>No Parameter: const functionName = () = > {};</li>
+    <li>One Parameter: const functionName = paramOne ⇒ {};</li>
+<li>More Parameter: const functionName = (paramOne, paramTwo) ⇒ {};</li>
+<li>Single line function: no {} nor return needed: const sumNumbers = number = > number + number</li>
+<li>Multi line function: const sumNumber = number ⇒ { const sum  = number + number; return sum;};</li></ul>
+<br><br>
+<h2 id="scope">Scope</h2>
+<p>defines where variables can get accessed (some only in parts of the code!)</p>
+<ul>
+    <li><strong>Global Scope</strong>: Variables are defined outside block, called <em>global variables</em> and can be accessed anywhere in the code.</li>
+    <li><strong>Global Namespace</strong>: space in our code that contains globally scoped information.</li>
+    <li><strong>Block Scope</strong>: Variable defined within block {} called local variable and only usable within block.</li>
+    <li><strong>Scope Pollution</strong>: means too many global variables - bad practice!</li>
+    <li>Global variable kann durch Block function dauerhaft verändert werden!</li>
+    <li><strong>Faustregel:</strong> If a variable does not need to exist outside a block— it shouldn’t!</li>
+</ul> <br><br>
+<h2 id="arr">Arrays</h2>
+<p>JavaScripts way of creating lists -> let fruits = ['apple', 'orange', 'banana']; containing possibly <strong>different</strong> datatypes, like let array = ['1', true, 'hello']</p>
+<ul><li>Elements have a chronological index starting with 0, so array[0] = 1 </li>
+<li>Element ändern: array[0] = 25 --- ändert array[0]</li>
+<li>.length gibt Auskunft über number of elements: console.log(array.length)</li>
+<li>Nested Arrays, bsp: const nestedArr = [2, [45, 4]] -> zum targeten nestedArr[1][0] = 45 </li></ul>
+<br>
+<h3>Math & Arrays</h3>
+<p>const groceries = list => { <br>
+
+    let listString = '' <br>
+    
+    for (let i=0; i < list.length; i++) {listString += list[i].item; <br>
+    
+    if (i < list.length - 2) {listString += ', ';} <br>
+    
+    else if (i == list.length - 2){listString += ' and '; }}</p>
+<br><br>
+<h2 id="method">Methods</h2>
+<p>data stored on object as a functin is called a method</p>
+<ul>
+    <li><strong>.push</strong> - add items to end of array, like newArr.push(’new item’);</li>
+    <li><strong>.pop</strong> - deletes last item of array, bsp const remove = arr.pop();</li>
+    <li><strong>.slice</strong> - Sequenz nutzen, Start mit Index # und ende mit Index, das NICHT mehr dazugehört  —> non-mutating!</li>
+    <li><strong>.shift</strong> - remove first item</li>
+    <li><strong>.unshift</strong> - add new item as first</li>
+    <li><strong>.forEach</strong> - executes same code for every element of array but does not change array, bsp: bsp: const fruits = [’apple’, ‘pear’] <br>
+        fruits.forEach(getFruit(fruit){console.log(`I want to eat a ${fruit}`)) -> consists of identifier.forEach(functionname(elements){console….. <br>
+        oder: fruits.forEach(fruit => console.log(fruit));</li>
+    <li><strong>.map</strong> - returns a new array using every item —> we have to define new variable! Bsp: const numbers = [1, 2, 3, 4, 5]; / const bigNumbers = numbers.map(number => {
+          return number * 10;                });</li>
+    <li><strong>.filter</strong> - returns new array after checking for certain condition. Bsp: const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; / const shortWords  words.filter(word => {  return word.length < 6; });
+    </li>
+    <li><strong>.findIndex</strong> - will return the index of the first element that evaluates to true in the callback function. Bsp: const jumbledNums = [123, 25, 78, 5, 9];  / const lessThanTen = jumbledNums.findIndex(num => {  return num < 10;});</li>
+    <li><strong>.reduce</strong> - returns a single value after iterating through the elements of an array, thereby reducing the array. Bsp: const numbers = [1, 2, 4, 10]; / const summedNums = numbers.reduce((accumulator, currentValue) => {  return accumulator + currentValue  }, optionalesZweitesArgument); <br>
+        The value of accumulator = value of the first element in the array and the currentValue = second element. Falls zu jeder Nummer eine Zahl addiert werden soll, dann zweites Argument anhängen, 
+    optionales zweites Argument: initial accumulator</li>
+    <li><strong>.some</strong> - prüft, ob mindestens ein Element der Bedingung entspricht und returned true/false</li>
+    <li><strong>.every</strong> - prüft, ob alle Elemente die Bedingung erfüllen und returned true/false</li>
+    <li><strong>.sort</strong> - const sortSpeciesByTeeth = arr =>
+        arr.sort((a, b) => a.numTeeth > b.numTeeth); —> nach property sortieren</li>
+</ul> <br><br>
+
+<h2 id="loops">Loops</h2>
+<p>Loops iterate or repeat an action until a specific condition is met. When the condition is met, the loop stops and the computer moves on to the next part of the program</p>
+<h3>For Loops</h3>
+<p>Consists of three parts: for(starting condition = initialization; stopping condition; iteration statement) {do this} <br>
+<ul><li>initialization starts the loop and can be used to declare iterator variable</li>
+<li>a stopping condition is the condition that the iterator variable is evaluated against— if the condition evaluates to true the code block will run, and if it eval
+    uates to false the code will stop.</li>
+<li>an iteration statement is used to update the iterator variable on each loop</li></ul>
+This makes <strong>for (let i = 0; i < array.length; i++) {do the following}</strong> - if backward loop, then for (let i = arr.length - 1; i >=0; i--)</p>
+<br><h3>Nested Loops</h3> 
+<p>Check this example out: const myArray = [6, 19, 20]; <br>
+    const yourArray = [19, 81, 2]; <br>
+    for (let i = 0; i < myArray.length; i++) { <br>
+      for (let j = 0; j < yourArray.length; j++) { <br>
+        if (myArray[i] === yourArray[j]) {<br>
+          console.log('Both arrays have the number: ' + yourArray[j]);       }      }    } </p> <br>
+<h3>While Loops</h3>
+<p>when we don’t know in advance how many times the loop should run! Example:
+     <br>
+    let counterTwo = 1; <br>
+while (counterTwo < 4) { <br>
+  console.log(counterTwo); <br>
+  counterTwo++;}
+</p> <br>
+<h3>Do.. while.. </h3>
+<p>will run at least once whether or not the condition evaluates to true, example: <br>
+    let countString = ''; <br>
+    let i = 0; <br>
+    
+    do {countString = countString + i; i++} while (i < 5);<br>
+    
+    console.log(countString);
+</p> <br>
+<h3>Break Keyword</h3>
+<p>allows programs to“break” out of the loop from within the loop’s block</p> <br>
+<h3>For.. of</h3>
+<p>für Arrays & Strings alike, reverse loop nicht möglich, nur relevant, falls <strong>Indexnummer irrelevant!</strong> Beispiel:<br>
+    const fruits = ['oranges', 'apples', 'grapes']; <br>
+
+for (const fruit of fruits) {            <br>
+ /* if (bird === 'Basan'){ <br>
+    break; */               <br>
+  } console.log(fruit); }    <br>  
+  -> fruit = beliebiges Wort für items of fruits -> continue anstelle von break, um item(s) auszulassen ->
+</p>  <br><br>
+
+<h2>Objects</h2>
+<p>JavaScript objects are containers storing related data and functionality and are mutable! we fill object with unordered data. This data is organized into 
+    key-value pairs. A key is like a variable name that points to a location in memory that holds a value. A key’s value can be of any data type in the 
+    language including functions or other objects. <br><br>
+<strong>let newObject = {’key’ : ‘value’ , color : ‘silver’}; —> inside curly braces are properties</strong> <br>
+<ul><li>Properties erfahren: newObject.color oder newObject[color] -> bracket notation is must when accessing keys that have numbers, spaces, or special characters</li>
+<li>Property hinzufügen oder überschreiben: spaceship[color] = ‘green’ || spaceship.color = ‘green’</li>
+<li>property löschen: delete objectName.color;</li>
+<li>ACHTUNG! Um verschachtelt abzurufen können nicht . auf . folgen, sondern .property[nächste].letzte</li>
+<li>Objects are <strong>passed by reference</strong>. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in 
+    memory holding that object. —> objects mit const können dadurch <strong>indirekt mutated</strong> werden, bsp.: <br>
+    const spaceship = {homePlanet : 'Earth', color : 'silver'  }; <br>
+        
+        let paintIt = obj => {obj.color = 'glorious gold'};    <br> paintIt(spaceship);</li>
+    <li>Privacy in Objects: wenn Property nicht geändert werden soll, dann common practice mit _ zu beginnen, also _property:</li></ul></p> <br>
+<h3>Create Methods of Objects</h3>
+<p>const alienShip = {
+      invade () {
+        console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+          }                   };</p> <br>
+<h3>this keyword</h3>
+<p>inside object können die properties nicht automatisch bezug aufeinander nehmen, daher this.property! Geht aber NICHT in Kombination mit arrow function, 
+    da sich this auf das höhergeordnete Objekt bezieht</p> <br>
+<h3>Getters</h3>
+<p>are methods that get and return the internal properties of an object. Aufbau: get methodnameAusdenken() {if() {do} else {do}} und called ohne () <br>
+    methodName alias Keyword darf aber nicht gleichen Namen wie Property haben! Im Zweifel Differenzierung durch _keyword Beispiel: <br>
+    const person = {_firstName: 'John', _lastName: 'Doe', <br>
+          get fullName() {if (this._firstName && this._lastName){return `${this._firstName} ${this._lastName}`; } else { return 'Missing a first name or a last name.';  }}}</p> <br>
+
+<h3>Setters</h3>
+<p>create setter methods which reassign values of existing properties within an object. They are called without (). Syntactically, it looks like we’re reassigning the value of a property. <br>
+    const person = {_age: 37, <br>
+          set age(newAge){if (typeof newAge === 'number'){this._age = newAge} else {console.log('You must assign a number to age'); }  }}; <br>
+        -> _age wird durch newAge ausgetauscht dank age method</p> <br>
+<h3>Factory Functions</h3>
+<p>returns an object and can be reused to make multiple object instances. Factory functions can also have parameters allowing us to customize the object 
+    that gets returned. bsp: <br>
+    const monsterFactory = (name, age, energySource, catchPhrase) => {<br>
+          return {name: name, age: age, energySource: energySource, scare() {console.log(catchPhrase);  }  }}; <br>
+    <strong>Objekt zuschreiben: </strong> const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!'); <br>
+<strong>Destructuring aka Property Value Shorthand</strong>: vereinfachen durch return {name, age} <br>
+<strong>Destructuring Assignments</strong>: weiter vereinfachen, indem man Variables out of Properties macht. Altbekannt const residence = vampire.residence;. 
+<strong>NEU:</strong>  const { residence } = vampire;</p> <br>
+<h3>Abstractions</h3>
+<p>man kann function einer anderen zuschreiben, falls gewünscht: const function = dasIstEineSehrLangeFunction; </p> <br>
+<h3>Higher Order Functions</h3>
+<p>Functions as parameters: A higher-order function is a function that either accepts functions as parameters, returns a function, or both! 
+    We call functions that get passed in as parameters callback functions. Example: <br>
+    const higherOrderFunc = param => {param(); return `I just invoked ${param.name} as a callback function!`} <br>
+        
+        const anotherFunc = () => {return 'I\'m being invoked by the higher-order function!';} <br>
+        
+        higherOrderFunc(anotherFunc);</p> <br><br>
+
+<h2 id="debug">Errors & Debugging</h2>
+<p>Compiler = piece of software trying to translate your code so that your computer can understand and run it. If not possible it will logg information as an error stack trace</p>
+<h3>Error Types</h3>
+<ul>
+    <li><strong>Syntax Error</strong>: Tippfehler, Satzzeichen</li>
+    <li><strong>Reference Error</strong>: z.B. Variable verwenden, die nie declared wurde</li>
+    <li><strong>Type Error</strong>: attempt to perform an operation on a value of the wrong type. For example, if we tried to use a string method on a number</li>
+    <li><strong>Silent Error:</strong> Code can work but still give wrong results</li>
+</ul>
+<h3>Debugging</h3>
+<ol>
+    <li>go to beginning of malfunctioning code & console.log all variables, existing values & arguments</li>
+    <li>add console.log() statements to ensure updated variables have the values that you now expect and that the block of code is being executed.</li>
+    <li>Fix bug!</li>
+</ol><br><br>
+<h2 id="html">Connect JS to HTML</h2>
+<p><strong>OUTDATED METHOD:</strong> via script element mitten im HTML. <strong>AKTUELL:</strong> separate JS file via script src="./example.js" inkl closing tag platziert vor 
+body closing tag. Separate Files abspeichern nennt man SoC: Separation of Concerns. HTML parsers help browsers render the elements accordingly. Elements, including the
+ script element, are by default, parsed in the order they appear in the HTML file. When the HTML parser encounters a script element, it loads the script then 
+ executes its contents before parsing the rest of the HTML. Abhilfe schaffen dank DEFER tag (im inneren des script Elements): dadurch HTML ganz laden lassen und
+anschließend erst JS laden lassen. ASYNC attribute: the script will not wait until the entire page is parsed: it will execute immediately after it has been downloaded. 
+Async is useful for scripts that are independent of other scripts in order to function accordingly</p><br>
+<h3>Accessing Elements</h3>
+<ul>
+    <li><strong>document object</strong> - the door to the DOM structure. The document object allows you to access the root node of the DOM tree. Before you can access
+         a specific element in the page, first you must access the document structure itself. The document object allows scripts to access children of the DOM as properties. —> accessing <body> through document.body</li>
+    <li><strong>.innerHTML</strong> - allows you to access and set the contents of an element.
+
+        → `document.body.innerHTML = 'h2 This is a heading /h2';`</li>
+    <li><strong>.querySelector()</strong> - allows us to specify a CSS selector as a string and returns the first element that matches that selector, .querySelector('p').
+    Alternativ für alle CSS Elemente eines Elements .querySelectorAll()</li>
+    <li><strong>.getElementById('bio')</strong> - beispiel Verwendung: document.getElementById('bio').innerHTML = 'The description';</li>
+    <li><strong>.getElementByClassName('')</strong> - returns array</li>
+    <li><strong>Access individual Elements by Index</strong> - bsp. document.getElementsByClassName('student')[0].innerHTML = 'Not yet registered';</li>
+        </ul><br>
+<h3>Styling an Element</h3>
+<p>let blueElement = document.querySelector('.blue'); -> sucht elemente mit class blue <br> blueElement.style.backgroundColor = 'blue'; -> returns elements mit blue als background</p>
+<br><h3>Parent&Child</h3>
+<p>Each Element has .parentNode and .children property (latter will return array). —> für jeweiligen index: .children[0].  <br> 
+    ParentElement stylen: item.parentNode.style.backgroundColor = 'beige' <br>
+    .removeChild() method removes specified child, bsp. document.body.removeChild(paragraph); / alternativ: .hidden = true —> um nicht ganz zu entfernen</p>
+<br><h3>Create & insert Elements</h3>
+<p>.createElement() method creates a new element based on the specified tag name passed into it as an argument BUT it does not append it to the document. It creates an empty element with no inner HTML. <br>
+    Assign it to be the child of an element that already exists on the DOM= called appending → .appendChild() method will add a child element as the parent element’s last child node. 
+    <br>Bsp:  The following code appends the p element stored in the paragraph variable to the document body. document.body.appendChild(paragraph);</p>
+<br><h3>Assign ID</h3>
+<p>paragraph.id = ‘newID’;</p> <br>
+
+<h3>Adding Click Interactivity</h3>
+<p>assigning a function to run based on an [event](https://developer.mozilla.org/en-US/docs/Web/Events). Events can include anything from a click to a user mousing over an element.
+    Bsp: let element = document.querySelector('button'); <br>
+    element.onclick = function() {element.style.backgroundColor = 'blue'}; <br>
+    
+    ODER function turnBlue() {element.style.backgroundColor = 'blue';} / element.onclick = turnBlue;
+</p> <br>
+<h3>Events</h3>
+<p>Events on the web are user interactions and browser manipulations that you can program to trigger functionality. Some other examples of events are: A mouse clicking
+     on a button, Webpage files loading in the browser, A user swiping right on an image. When a user does any of the above actions, they’re causing the event to 
+     be fired or be triggered which changes DOM element. <br>
+    PROCESS: Event fires = when event listener takes place, event handler function is activated <br>
+<ol><li><strong>.addEventListener()</strong> - DOM element (=event target) listens for a specific event and 
+    executes a block of code (=event handler) when the event is detected. Bsp: <br>
+    let eventTarget = document.getElementById('targetElement'); <br>
+    eventTarget.addEventListener('click', function() {which function to perform when clicking}) -> best practice to call the function eventHandlerFunction()</li>
+    <li><strong>.onEvent property</strong> - eventTarget.onclick = eventHandlerFunction; </li>
+<li><strong>.removeEventListener('click', eventHandlerFunction());</strong> - BEISPIEL! innerhalb der Funktion kann removeEventListener dazu führen, dass die Funktion deaktiviert wird, also, dass sie 1 x funktioniert</li></ol>
+Events are stored as objects, so event object can be passed as an argument to the event handler function. bsp: <br>
+function eventHandlerFunction(event){console.log(event.timeStamp);} <br>
+OR eventTarget.addEventListener('click', eventHandlerFunction); <br> <br>
+Um mehr über Event zu erfahren: <br>
+<ul>
+    <li>.target property to reference the element that the event is registered to.</li>
+    <li>.type property to access the name of the event.</li>
+    <li>.timeStamp property to access the number of milliseconds that passed since the document loaded and the event was triggered.</li>
+</ul></p> <br><br>
+<h2 id="regex">Regular Expressions</h2>
+<p>To specify patterns for the computer to recognize, we use a special language called regular expressions — also known as regex or regexp. 
+    A regular expression is a sequence of characters representing a pattern. <br>
+    <strong>client-side validation:</strong> make parts of a form required and others optional, minimum & maximum values or length; either selbst coden oder sich vorgefertigter form validation library bedienen wie https://www.npmjs.com/package/just-validate oder https://parsleyjs.org/
+<br><strong>back-end-validation:</strong> As a rule, the back-end should never trust the data it receives. It allows further validation code that users can’t see, bsp checking database for usernames if taken</p>
+
+
+
+    <br><br>
+    </body>
+    <footer id="hinweise">
+        <h2>Hinweise & Tipps</h2>
+        <ul>
+            <li>Falls ‘ im string, dann \’, sodass er geprintet werden kann, also it\’s</li>
+            <li>Kommentare: falls einzeilig, dann // so. Falls mehrzeilig, /* dann so */</li>
+            <li>Falsy Values = 0, empty strings, NaN (not a number)</li>
+            <li>JavaScript is camelCase</li>
+        </ul>
+    </footer>
+</html>
