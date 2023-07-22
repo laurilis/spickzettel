@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Github & Command Line</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600&family=Rubik+Pixels&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1 id="top">Github & Command Line</h1>
+    <button><a href="./index.html">HTML</a></button>
+    <button><a href="./design.html">Design</a></button>
+    <button><a href="./javascript.html">JavaScript</a></button>
+    <nav>
+        <a href="#git">Github</a> <a href="#readme">README.md</a> <a href="#markdown">Markdown</a>
+        <a href="#colo">Farben</a> <a href="#font">Schriftart</a><a href="#bread">Breadcrumbs</a>
+        <a href="#flexbox">Flexbox</a><a href="#grid">Grids</a><a href="#media">Media Queries</a>
+    </nav>
+    </header>
+<main>
+<h2 id="git">Github</h2>
+<p>Git is the industry-standard version control system for web developers. GitHub is both a website and a service that facilitates software development by allowing
+     you to store your code in containers, called repositories (Git repository = project managed), and by tracking changes made to your code. In addition, it offers
+      a hosting service and tools to build, test, and deploy code. —> GitHub is a tool for working with Git —> Git is Tool, Github is service</p> <br>
+<h3>Structure</h3>
+<ul>
+    <li><strong>working directory</strong>: where all the work is done</li>
+    <li><strong>staging area:</strong> where you’ll list changes you make to the working directory</li>
+    <li><strong>repository:</strong> where git permanently stores those changes as different versions of the project</li> 
+    <li><strong>branch: divergence from the main project. When you branch out, git is essentially making a new state of your current code, upon which you can work, 
+        without affecting the important main state of the code. One can create as many branches as they wish and even create branches off of other branches.
+        <br> —> main branch is where changes get merged into. <br>
+        →create new branch when fixing bug, adding feature<br>
+
+        →naming convention with logic, bsp: `carlos_feature_dashboard_notifications` (name_branchtype_short branch description) <br>
+        
+        clone=download repository → create new branch → commit </strong></li>
+    <li><strong>pull requests</strong> - allow collaborators to review and give feedback on proposed code changes before they are merged to the main branch</li>
+</ul> <br>
+<h3>Commands</h3>
+<ul>
+    <li><strong>git init</strong> - (re)initialize git project</li>
+    <li><strong>git add filename / git add .</strong> - um neue Datei in die staging area (Bearbeitungsraum) zu rufen (auch nach commit muss wieder geadded werden).
+    add . für alle Files, ansonsten git add filename1 filename2</li>
+    <li><strong>git status</strong> - überprüft, ob changes gemacht wurden (modified), untracked means that Git sees the file but has not started tracking changes yet.</li>
+    <li><strong>git diff filename</strong> - vergleicht änderung(nicht gespeichert) mit original und zeigt Unterschiede (grün)</li>
+    <li><strong>git commit -m "Bezeichnung Commit"</strong> - permanently stores changes from the staging area inside the repository- Head Commit is commit you're on</li>
+    <li><strong>git commit --amend</strong> - to update=replace your previous commit, to keep same -m write $ git commit --amend --no-edit</li>
+    <li><strong>git show head</strong> - zeigt head commit an</li>
+    <li><strong>git checkout HEAD filename</strong> - git checkout HEAD filename</li>
+    <li><strong>git log</strong> - lists commits made; <em>git log --oneline</em> shows commit in one line format. <em>git log -S "keyword"</em> displays a list of commits that contain 
+        the keyword in the message. <em>git log --oneline --graph</em> displays a visual representation of how the branches and commits were 
+        created in order to help you make sense of your repository history. When
+         used alone, the description can be very lengthy, so you can combine the
+         command with --oneline in order to shorten the description.</li>
+    <li><strong>git reset HEAD filename</strong> - resets file to be the same as in HEAD commit → It does not discard file changes from the working directory, it just removes them from the staging area</li>
+    <li><strong>git reset commit_SHA</strong> - sets head commit to the commit with the SHA beginning with the 6 digits, bsp git reset 5d69206</li>
+    <li><strong>git stash</strong> - aktuelles Projekt pausieren, um was anderes zu bearbeiten: projekt wird in ablage verfrachtet und per git stash pop wieder aktiviert</li>
+    <li><strong>git alias commands</strong> - commands kürzel benennen mit  $ git config --global alias.co "checkout" wird zu $ git co example_branch (co anstatt checkout)</li>
+</ul>
+<br>
+<h3>An Branch weiterbasteln</h3>
+<ol>
+
+<li>Branch(=code) kopieren und zb in GitBash weiterarbeiten</li>
+    <li>Dafür GitBash/Terminal öffnen, per cd & ls passenden Ordner auswählen und git clone LINK eingeben</li>
+    <li>Dann neuen Branch erstellen durch git checkout -b NEWBRANCHNAME</li>
+    <li>git add newbranchname</li>
+    <li>git commit -m “Added new print”</li>
+    <li>um neuen branch hochzuladen: git push - - set-upstream origin NEWBRANCHNAME</li>
+    <li>—> create pull request, um andere teammember dazu anzuregen den eigenen neuen branch abzusegnen, um ihn zu aktivieren; good practice als Kommentar zu schreiben “to test: Make sure that xxx. Thanks!”</li>
+</ol> <br> <br>
+<h2 id="readme">README.md</h2>
+<p>text file that is meant to be read as soon as someone views the repository. This file contains text to introduce, explain, and share the information required to 
+    understand what the project is about. - often as .md file</p>
+<h3>Include:</h3>
+<ul>
+    <li><strong>Project Title</strong></li>
+    <li><strong>Description</strong>: describe the main purpose of your project. why did you build
+        this project? and what problem(s) does it solve?</li>
+    <li><strong>Features</strong>: If your project has multiple features, list them here.  You can even add
+        screenshots and gifs to show off the features.</li>
+    <li><strong>How to use</strong>: write step-by-step instructions on how to install and use your
+        project. Any software or package requirements should also be listed here.</li>
+    <li><strong>Technologies</strong>: List all the technologies and/or frameworks you used and what purpose they serve in your project.</li>
+    <li><strong>Collaborators</strong>: Write your team members’ or collaborators’ names here along with a link to their GitHub profile.</li>
+    <li><strong>License</strong>: list a license on your README so other developers can understand what they can and cannot do with your project. You can use this guide to help you choose a license.</li>
+
+</ul> <br><br>
+<h2 id="markdown">Markdown</h2>
+<p>textToHtml conversion tool = plain text formatting syntax + software</p>
+<ul>
+    <li># headings, also # = h1 und #### = h4; h1 mit nächster Zeile === für h2 ---</li>
+    <li>*italics*</li>
+    <li>**bold**</li>
+    <li>~durchgestrichen~</li>
+    <li>unordered list punkte angeführt durch * oder + oder - wie - beispiel</li>
+    <li>ordered list durch 1. item</li>
+    <li>no nested lists possible, aber paragraphs innerhal list item: start with 4 spaces oder 1x tab</li>
+    <li>für quote: je zeile beginnt mit ></li>
+    <li>SAVE as .md oder .markdown (.txt geht aber auch, md ist kein eigenes file format) —> markdown editor software (=markdown parser) wandelt datei zu html um</li>
+</ul>
+</main>
+</body>
+</html>
