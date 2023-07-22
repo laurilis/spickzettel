@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Accessibility</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600&family=Rubik+Pixels&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1 id="top">Digital Accessibility</h1>
+    <button><a href="index.html">HTML</a></button>
+    <button><a href="css.html">CSS</a></button>
+    <button><a href="./javascript.html">JavaScript</a></button>
+    <button><a href="design.html">Design</a></button>
+    <button><a href="./github.html">Github & Command Line</a></button>
+
+    </header>
+    <main>
+        <p>make Websites accessible for people with disabilities! 
+            <ul> <li>Screen readers that parse a website for a user with visual impairments</li>
+            <li>Videos on websites are closed-captioned for individuals with hearing impairments</li>
+        <li>Images include “alt text” for individuals with visual impairments</li>
+    <li>Websites must be navigable by keyboard for</li>
+<li>users who may not be able to operate a mouse (i.e., navigating using the “Tab” on a keyboard)</li></ul>
+Web Accessibility Initiative hat Guidelines veröffentlicht namens ARIA (Accessible rich Internet Applications).
+Writing more semantic HTML tags and image captions also can improve your website’s standing in search engines, as they provide the search engine more information 
+about the content that your site delivers.
+            </p> <br>
+<h2>Best Practices</h2>
+<ul>
+    <li>Kontrast & Colors: auf Kontrast achten & color impairment beachten (es gibt websites zur Vorschau wie toptal)</li>
+    <li>mehr Reichweite: As an added benefit, having a keyword in an h1 tag will typically impact search results more than having the same keyword in a p tag</li>
+    <li>h1 nur einmal pro Seite best practice, h2 for each sibling section</li>
+    <li>Semantic HTML: The quickest way of improving accessibility for screen readers is to use the appropriate tags for a given task. Bsp: HEADER sollte navigationsleiste, suchleisten, introductionary elements & links enthalten </li>
+    <li>role attribute - für screen reader, bsp. role="complementary" attribute and value can help a screen reader user understand that the information in the code 
+        editor is complementary (or supporting) to the information you are reading right now. It helps users of screen readers identify the relationship between the 
+        two sections of the page. zB role=”presentation” —> inhalt kann geskipped werden, zb ol oder ul <br> —> https://www.w3.org/TR/html-aria/#allowed-aria-roles-states-and-properties</li>
+    <li>The property aria-label gives the screen reader additional information to read out loud to the user. bsp &lt;p aria-label="Artist"&gt;Armand Cabrera, 2010&lt;/&gt;</li>
+    <li>ALT ATTRIBUTE works like aria-label but has additional functionality. Alt is used to describe an image (or several other elements). Aria will in contrast never be displayed. If an image is described by text near the image, do not duplicate the description in the alt attribute. Use an empty alt attribute instead.</li>
+</ul>
+
+    </main>
+</body>
+</html>
